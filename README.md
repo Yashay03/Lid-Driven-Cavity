@@ -23,18 +23,18 @@ A computational fluid dynamics (CFD) solver for the classic lid-driven cavity fl
 - Pillow (for animations)
 
 ### Problem parameters
-length = 0.4  # Domain size (m)
-nx = ny = 60  # Grid resolution
-rho = 1.0     # Density (kg/m³)
-nu = 0.004    # Kinematic viscosity (m²/s)
-u_lid = 1.0   # Lid velocity (m/s)
+-length = 0.4  # Domain size (m)
+-nx = ny = 60  # Grid resolution
+-rho = 1.0     # Density (kg/m³)
+-nu = 0.004    # Kinematic viscosity (m²/s)
+-u_lid = 1.0   # Lid velocity (m/s)
 
 ### Simulation mode
-unsteady = True  # Set to False for steady simulation
-dt = 0.1         # Time step size (s)
-total_time = 2.0 # Total simulation time (s)
-create_animations = True
-animation_dir = "animations"
+-unsteady = True  # Set to False for steady simulation
+-dt = 0.1         # Time step size (s)
+-total_time = 2.0 # Total simulation time (s)
+-create_animations = True
+-animation_dir = "animations"
 
 ### Problem
 The lid-driven cavity is a benchmark problem in CFD where fluid is contained in a square cavity with the top wall (lid) moving at a constant velocity while all other walls remain stationary. This creates a recirculating flow with complex features including:
@@ -103,12 +103,6 @@ If the solution doesn't converge:
 ## Future Work
 
 - Implement higher-order schemes (e.g., MUSCL, WENO)
-- Add adaptive mesh refinement
-- Extend to 3D simulations
-- Implement turbulence models
-- Add parallel processing capabilities
-- Develop a GUI for parameter input and visualization
-
 
 ## References
 
