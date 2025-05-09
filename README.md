@@ -23,18 +23,18 @@ A computational fluid dynamics (CFD) solver for the classic lid-driven cavity fl
 - Pillow (for animations)
 
 ### Problem parameters
--length = 0.4  # Domain size (m)
--nx = ny = 60  # Grid resolution
--rho = 1.0     # Density (kg/m³)
--nu = 0.004    # Kinematic viscosity (m²/s)
--u_lid = 1.0   # Lid velocity (m/s)
+- length = 0.4  # Domain size (m)
+- nx = ny = 60  # Grid resolution
+- rho = 1.0     # Density (kg/m³)
+- nu = 0.004    # Kinematic viscosity (m²/s)
+- u_lid = 1.0   # Lid velocity (m/s)
 
 ### Simulation mode
--unsteady = True  # Set to False for steady simulation
--dt = 0.1         # Time step size (s)
--total_time = 2.0 # Total simulation time (s)
--create_animations = True
--animation_dir = "animations"
+- unsteady = True  # Set to False for steady simulation
+- dt = 0.1         # Time step size (s)
+- total_time = 2.0 # Total simulation time (s)
+- create_animations = True
+- animation_dir = "animations"
 
 ### Problem
 The lid-driven cavity is a benchmark problem in CFD where fluid is contained in a square cavity with the top wall (lid) moving at a constant velocity while all other walls remain stationary. This creates a recirculating flow with complex features including:
@@ -77,19 +77,27 @@ The solver implements four discretization schemes for the convective terms:
 ### Velocity Profiles
 
 The solver compares velocity profiles along the geometric center lines with benchmark data from Ghia et al. (1982).
+
 ![v_profile_0 9_0 9_0 1](https://github.com/user-attachments/assets/f14af1c0-39d8-490a-8609-dbde4ab5a81e)
 
 
 ### Convergence History
 
 Convergence history plots show the residual reduction over iterations for each scheme.
+
 ![convergence_0 5_0 5_0 5](https://github.com/user-attachments/assets/c39e8e01-84f6-4ff3-ae80-1f07a93df4c4)
 
 
 ### Velocity Contours
 
 Velocity contour plots show the distribution of u-velocity, v-velocity, and velocity magnitude throughout the domain.
+
 ![v mag](https://github.com/user-attachments/assets/54887676-6ac9-4c11-b0e0-c3c1de4bfc84)
+
+### Streamlines
+
+![hybr](https://github.com/user-attachments/assets/4b7e0e7b-0a09-4641-9313-ef7b46d64cd5)
+
 
 ### Animations
 
