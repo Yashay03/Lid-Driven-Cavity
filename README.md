@@ -77,14 +77,19 @@ The solver implements four discretization schemes for the convective terms:
 ### Velocity Profiles
 
 The solver compares velocity profiles along the geometric center lines with benchmark data from Ghia et al. (1982).
+![v_profile_0 9_0 9_0 1](https://github.com/user-attachments/assets/f14af1c0-39d8-490a-8609-dbde4ab5a81e)
+
 
 ### Convergence History
 
 Convergence history plots show the residual reduction over iterations for each scheme.
+![convergence_0 5_0 5_0 5](https://github.com/user-attachments/assets/c39e8e01-84f6-4ff3-ae80-1f07a93df4c4)
+
 
 ### Velocity Contours
 
 Velocity contour plots show the distribution of u-velocity, v-velocity, and velocity magnitude throughout the domain.
+![v mag](https://github.com/user-attachments/assets/54887676-6ac9-4c11-b0e0-c3c1de4bfc84)
 
 ### Animations
 
