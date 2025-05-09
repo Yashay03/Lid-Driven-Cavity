@@ -3,47 +3,41 @@
 
 A computational fluid dynamics (CFD) solver for the classic lid-driven cavity flow problem, implemented in Python. This solver uses the SIMPLE (Semi-Implicit Method for Pressure-Linked Equations) algorithm to solve the incompressible Navier-Stokes equations on a staggered grid.
 
-## Features
+### Features
 
-- **Multiple Discretization Schemes**: Implements and compares Central Difference Scheme (CDS), Upwind, Hybrid, and QUICK schemes
-- **Steady and Unsteady Simulations**: Supports both steady-state and time-dependent simulations
-- **Comprehensive Visualization**:
-
+- Multiple Discretization Schemes: Implements and compares Central Difference Scheme (CDS), Upwind, Hybrid, and QUICK schemes
+- Steady and Unsteady Simulations: Supports both steady-state and time-dependent simulations
+- Comprehensive Visualization
 - Velocity vector plots
 - Streamline visualization
 - Velocity contour plots (u, v, and magnitude)
 - Velocity profiles with comparison to benchmark data
 - Convergence history plots
+- Animation Capabilities: Creates GIF animations of velocity fields and contours over time
+- Benchmark Comparison: Compares results with Ghia et al. (1982) benchmark data
+- Performance Metrics: Tracks solution time and convergence rates for different schemes
 
-
-
-- **Animation Capabilities**: Creates GIF animations of velocity fields and contours over time
-- **Benchmark Comparison**: Compares results with Ghia et al. (1982) benchmark data
-- **Performance Metrics**: Tracks solution time and convergence rates for different schemes
-
-- ### Prerequisites
-
+### Prerequisites
 - Python 3.7+
 - NumPy
 - Matplotlib
 - Pillow (for animations)
 
-- # Problem parameters
+### Problem parameters
 length = 0.4  # Domain size (m)
 nx = ny = 60  # Grid resolution
 rho = 1.0     # Density (kg/m³)
 nu = 0.004    # Kinematic viscosity (m²/s)
 u_lid = 1.0   # Lid velocity (m/s)
 
-# Simulation mode
+### Simulation mode
 unsteady = True  # Set to False for steady simulation
 dt = 0.1         # Time step size (s)
 total_time = 2.0 # Total simulation time (s)
-
-# Animation options
 create_animations = True
 animation_dir = "animations"
 
+### Problem
 The lid-driven cavity is a benchmark problem in CFD where fluid is contained in a square cavity with the top wall (lid) moving at a constant velocity while all other walls remain stationary. This creates a recirculating flow with complex features including:
 
 - Primary vortex in the center
@@ -51,114 +45,6 @@ The lid-driven cavity is a benchmark problem in CFD where fluid is contained in 
 - Boundary layers along the walls
 
 The Reynolds number (Re = u_lid × length / ν) determines the flow characteristics
-
-### Lid-Driven Cavity Flow Solver
-
-A computational fluid dynamics (CFD) solver for the classic lid-driven cavity flow problem, implemented in Python. This solver uses the SIMPLE (Semi-Implicit Method for Pressure-Linked Equations) algorithm to solve the incompressible Navier-Stokes equations on a staggered grid.
-
-
-
-
-
-## Features
-
-- **Multiple Discretization Schemes**: Implements and compares Central Difference Scheme (CDS), Upwind, Hybrid, and QUICK schemes
-- **Steady and Unsteady Simulations**: Supports both steady-state and time-dependent simulations
-- **Comprehensive Visualization**:
-
-- Velocity vector plots
-- Streamline visualization
-- Velocity contour plots (u, v, and magnitude)
-- Velocity profiles with comparison to benchmark data
-- Convergence history plots
-
-
-
-- **Animation Capabilities**: Creates GIF animations of velocity fields and contours over time
-- **Benchmark Comparison**: Compares results with Ghia et al. (1982) benchmark data
-- **Performance Metrics**: Tracks solution time and convergence rates for different schemes
-
-
-## Installation
-
-### Prerequisites
-
-- Python 3.7+
-- NumPy
-- Matplotlib
-- Pillow (for animations)
-
-
-### Setup
-
-1. Clone this repository:
-
-```shellscript
-git clone https://github.com/yourusername/lid-driven-cavity-solver.git
-cd lid-driven-cavity-solver
-```
-
-
-2. Install required packages:
-
-```shellscript
-pip install numpy matplotlib pillow
-```
-
-
-
-
-## Usage
-
-### Basic Usage
-
-Run the solver with default settings:
-
-```shellscript
-python lid_driven_cavity_solver_fixed.py
-```
-
-### Customizing Parameters
-
-Edit the main execution section at the bottom of the script to customize:
-
-```python
-# Problem parameters
-length = 0.4  # Domain size (m)
-nx = ny = 60  # Grid resolution
-rho = 1.0     # Density (kg/m³)
-nu = 0.004    # Kinematic viscosity (m²/s)
-u_lid = 1.0   # Lid velocity (m/s)
-
-# Simulation mode
-unsteady = True  # Set to False for steady simulation
-dt = 0.1         # Time step size (s)
-total_time = 2.0 # Total simulation time (s)
-
-# Animation options
-create_animations = True
-animation_dir = "animations"
-```
-
-### Running Specific Schemes
-
-To run only specific schemes, modify the `schemes` list in the `run_lid_driven_cavity` function:
-
-```python
-# Schemes to compare
-schemes = ["CDS", "Upwind"]  # Only run CDS and Upwind
-```
-
-## Problem Description
-
-The lid-driven cavity is a benchmark problem in CFD where fluid is contained in a square cavity with the top wall (lid) moving at a constant velocity while all other walls remain stationary. This creates a recirculating flow with complex features including:
-
-- Primary vortex in the center
-- Secondary vortices in the corners
-- Boundary layers along the walls
-
-
-The Reynolds number (Re = u_lid × length / ν) determines the flow characteristics:
 
 - Low Re (< 1000): Laminar flow with simple vortex structure
 - High Re (> 1000): More complex flow patterns with multiple vortices
