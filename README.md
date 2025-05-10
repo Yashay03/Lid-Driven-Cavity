@@ -4,7 +4,7 @@ A computational fluid dynamics (CFD) solver for the classic lid-driven cavity fl
 
 ### Features
 
-- Multiple Discretization Schemes: Implements and compares Central Difference Scheme (CDS), Upwind, Hybrid, and QUICK schemes
+- Multiple Discretization Schemes: Implements and compares Central Difference Scheme (CDS), Upwind, Hybrid
 - Steady and Unsteady Simulations: Supports both steady-state and time-dependent simulations
 - Comprehensive Visualization
 - Velocity vector plots
@@ -69,7 +69,6 @@ The solver implements four discretization schemes for the convective terms:
 1. **Central Difference Scheme (CDS)**: Second-order accurate but can be unstable at high Reynolds numbers
 2. **Upwind Scheme**: First-order accurate, very stable but introduces numerical diffusion
 3. **Hybrid Scheme**: Combines CDS and Upwind based on local Peclet number
-4. **QUICK Scheme**: Third-order accurate, provides better accuracy with reasonable stability
 
 
 ## Results and Visualization
