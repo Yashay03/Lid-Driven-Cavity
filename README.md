@@ -114,7 +114,7 @@ If the solution doesn't converge:
 
 ## Future Work
 
-- Implement higher-order schemes (e.g., MUSCL, WENO)
+- Implement higher-order schemes (e.g. QUICK, MUSCL, WENO)
 
 ## References
 
